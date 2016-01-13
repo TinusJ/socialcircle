@@ -1,14 +1,14 @@
 #socialcircle
-
-@authors : KyleSmit,TinusJ
-@version : 0.0.01
-
-Roadmap #1
--Initial App
--Page & Route Creations (Layout & Feel)
--Facebook feed
--Twitter feed
--Facebook Login
--Twitter Login 
--Google+ Login
+<br />
+@authors : KyleSmit,TinusJ<br />
+@version : 0.0.01<br />
+<br />
+Roadmap #1<br />
+-Initial App<br />
+-Page & Route Creations (Layout & Feel)<br />
+-Facebook feed<br />
+-Twitter feed<br />
+-Facebook Login<br />
+-Twitter Login <br />
+-Google+ Login<br />
 
