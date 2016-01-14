@@ -1,11 +1,60 @@
 <section >
 
-<div ng-controller="headController" >
+<div ng-controller="headController"  layout="column">
 
-
-	
 	Some Sort of App or Beast 
 </div>
+	
+   <!--Side Menu Navigator -->
+
+		<div layout="row" ng-controller="menuController">
+		  <md-sidenav md-component-id="left" class="md-sidenav-left">
+			<md-toolbar class="md-tall md-hue-2">
+				<span flex></span>
+				<div layout="column" class="md-toolbar-tools-bottom inset">
+				  <user-avatar></user-avatar>
+				  <span></span>
+				  <div>Firstname Lastname</div>
+				  <div>email@domainname.com</div>
+				</div>
+			  </md-toolbar>
+			  
+			<a class="btn btn-block btn-social btn-twitter">
+				<span class="fa fa-twitter"></span> Sign in with Twitter
+			</a>
+			
+			<a class="btn btn-block btn-social btn-twitter">
+				<span class="fa fa-facebook"></span> Sign in with Facebook
+			</a>
+			
+			<a class="btn btn-block btn-social btn-twitter">
+				<span class="fa fa-google-plus"></span> Sign in with Google
+			</a>
+			
+			<a class="btn btn-block btn-social btn-twitter">
+				<span class="fa fa-instagram"></span> Sign in with Instagram
+			</a>
+			
+			<a class="btn btn-block btn-social btn-twitter">
+				<span class="fa fa-linkedin"></span> Sign in with LinkedIn
+			</a>
+		  
+		  </md-sidenav>
+		  
+			<md-button ng-click="openLeftMenu()">
+			  Open Left Menu
+			</md-button>
+
+		  <!--<md-sidenav md-component-id="right" md-is-locked-open="$mdMedia('min-width: 333px')" class="md-sidenav-right">
+			<form>
+			  <md-input-container>
+				<label for="testInput">Test input</label>
+				<input id="testInput" type="text" ng-model="data" md-autofocus>
+			  </md-input-container>
+			</form>
+		  </md-sidenav> -->
+		  
+		</div>
 
 
 </section>
