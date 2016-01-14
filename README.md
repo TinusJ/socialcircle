@@ -4,7 +4,7 @@
 @version : 0.0.01<br />
 <br />
 Roadmap #1<br />
--Initial App<br />
+
 -Page & Route Creations (Layout & Feel)<br />
 -Facebook feed<br />
 -Twitter feed<br />
