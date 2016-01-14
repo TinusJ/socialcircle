@@ -1,4 +1,4 @@
- var socialcircle = angular.module("socialcircle", ['ngRoute','ngCordova']);
+ var socialcircle = angular.module("socialcircle", ['ngRoute','ngCordova','ngMaterial']);
  
 
 socialcircle.config(function($routeProvider,$locationProvider) {
