@@ -9,6 +9,9 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.tktec.socialcircle"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.tktec.socialcircle"
         }
     },
     "dependent_plugins": {}

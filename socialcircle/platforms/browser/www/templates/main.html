@@ -1,7 +1,23 @@
 <section >
 
-<div ng-controller="mainController" >
+<div ng-controller="mainController" ng-cloak>
 
+
+  <md-content>
+    <md-list>
+      <md-list-item class="md-3-line" ng-repeat="item in messages" ng-click="showConfirm($event,item)" flex="100"  flex-gt-md="auto">
+	  
+        <div class="md-list-item-text">
+          <h3>{{item.what}}</h3>
+          <h4>{{item.who}}</h4>
+          <p>{{item.notes}}</p>
+        </div>
+       
+        <md-divider ng-if="!$last"></md-divider>
+      </md-list-item>
+    </md-list>
+  </md-content>
+  
 </div>
 
 

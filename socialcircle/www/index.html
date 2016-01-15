@@ -2,7 +2,19 @@
 
 <html ng-app="socialcircle">
     <head>
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+	 <meta http-equiv="Content-Security-Policy" 
+	  content="default-src 'self' data: gap: http://localhost https://graph.facebook.com https://www.facebook.com https://ssl.gstatic.com https://fbcdn-profile-a.akamaihd.net 'unsafe-eval'; 
+			   style-src 'self'  'unsafe-inline';  
+			   font-src  'self'  'unsafe-inline';  
+			   media-src *;
+			   script-src 'self' 'unsafe-inline' 'unsafe-eval'  
+					  http://code.jquery.com 
+					  https://www.google-analytics.com
+					  http://maps.googleapis.com
+					  http://localhost
+					  https://graph.facebook.com
+					  https://fbcdn-profile-a.akamaihd.net
+					  https://www.facebook.com; ">		
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
@@ -22,7 +34,7 @@
 
 	
              <div class="app"  id="wrapper">
-			    <div id="header" class="md-whiteframe-2dp">
+			    <div class="md-whiteframe-2dp">
 						<div id="header" ng-include="'templates/header.html'"> </div>
 								<!-- Header if any-->
 		    	</div>

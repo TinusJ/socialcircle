@@ -1,12 +1,7 @@
 <section >
 
 <div ng-controller="headController"  layout="column">
-
-	Some Sort of App or Beast 
-</div>
-	
    <!--Side Menu Navigator -->
-
 		<div layout="row" ng-controller="menuController">
 		  <md-sidenav md-component-id="left" class="md-sidenav-left">
 			<md-toolbar class="md-tall md-hue-2">
@@ -14,47 +9,56 @@
 				<div layout="column" class="md-toolbar-tools-bottom inset">
 				  <user-avatar></user-avatar>
 				  <span></span>
-				  <div>Firstname Lastname</div>
+				  <div>{{loggedin_fb.name}}</div>
 				  <div>email@domainname.com</div>
 				</div>
 			  </md-toolbar>
 			  
-			<a class="btn btn-block btn-social btn-twitter">
+			<a class="btn btn-block btn-social btn-twitter" style="margin-left:10%;width:80%; margin-top:5%;">
 				<span class="fa fa-twitter"></span> Sign in with Twitter
 			</a>
 			
-			<a class="btn btn-block btn-social btn-twitter">
+			<a class="btn btn-block btn-social btn-twitter" style="margin-left:10%;width:80%;" ng-click="fb_login()">
 				<span class="fa fa-facebook"></span> Sign in with Facebook
 			</a>
 			
-			<a class="btn btn-block btn-social btn-twitter">
+			<a class="btn btn-block btn-social btn-twitter" style="margin-left:10%;width:80%;">
 				<span class="fa fa-google-plus"></span> Sign in with Google
 			</a>
 			
-			<a class="btn btn-block btn-social btn-twitter">
+			<a class="btn btn-block btn-social btn-twitter" style="margin-left:10%;width:80%;">
 				<span class="fa fa-instagram"></span> Sign in with Instagram
 			</a>
 			
-			<a class="btn btn-block btn-social btn-twitter">
+			<a class="btn btn-block btn-social btn-twitter" style="margin-left:10%;width:80%;">
 				<span class="fa fa-linkedin"></span> Sign in with LinkedIn
 			</a>
 		  
+		  
+		  <!--Need logout button -->
 		  </md-sidenav>
 		  
-			<md-button ng-click="openLeftMenu()">
-			  Open Left Menu
+			
+  <md-toolbar class="md-theme-light">
+    <h2 class="md-toolbar-tools">
+				<md-button ng-click="openLeftMenu()" style="float:left !important">
+			  <i class="fa fa-align-justify x2"></i>
 			</md-button>
 
-		  <!--<md-sidenav md-component-id="right" md-is-locked-open="$mdMedia('min-width: 333px')" class="md-sidenav-right">
-			<form>
-			  <md-input-container>
-				<label for="testInput">Test input</label>
-				<input id="testInput" type="text" ng-model="data" md-autofocus>
-			  </md-input-container>
-			</form>
-		  </md-sidenav> -->
+      <span style="float:center !important">Social Feeds</span>
+    </h2>
+  </md-toolbar>
+  
+  		</div>
+</div>
+	
+
+
+
+
+
 		  
-		</div>
+
 
 
 </section>
