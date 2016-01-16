@@ -11,3 +11,7 @@ Roadmap #1<br />
 -Twitter Login <br />
 -Google+ Login<br />
 
+Bugs 0.0.02<br />
+- Side nave scrolls down with feed
+- Lag / delay 
+
