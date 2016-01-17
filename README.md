@@ -13,5 +13,7 @@ Roadmap #1<br />
 
 Bugs 0.0.02<br />
 - Side nave scrolls down with feed
-- Lag / delay 
+- Lag / delay on clicks
+- Lag / Delaay on startup (use deviceready)
+- 
 
