@@ -7,13 +7,16 @@ Roadmap #1<br />
 
 -Page & Route Creations (Layout & Feel)<br />
 -Facebook feed<br />
+-save login tokens <br />
 -Twitter feed<br />
--Twitter Login <br />
 -Google+ Login<br />
 
-Bugs 0.0.02<br />
-- Side nave scrolls down with feed
-- Lag / delay on clicks
-- Lag / Delaay on startup (use deviceready)
-- 
+Need fixes 0.0.02<br />
+- Side nave scrolls down with feed<br />
+- Lag / delay on clicks<br />
+- Lag / Delaay on startup (use deviceready)<br />
+-colour schemes
+<br />
+Added change when login for twitter and facebook
+
 

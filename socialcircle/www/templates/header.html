@@ -9,18 +9,27 @@
 				<div layout="column" class="md-toolbar-tools-bottom inset">
 				  <user-avatar></user-avatar>
 				  <span></span>
-				  <div>{{loggedin_fb.name}}</div>
+				  <div>{{loggedin_fb.name != null ? loggedin_fb.name  : loggedin_tw.screen_name }}</div>
 				  <div>email@domainname.com</div>
 				</div>
 			  </md-toolbar>
 			  
-			<a class="btn btn-block btn-social btn-twitter" style="margin-left:10%;width:80%; margin-top:5%;">
+			<a class="btn btn-block btn-social btn-twitter" style="margin-left:10%;width:80%; margin-top:5%;" ng-click="tw_login()" ng-hide="loggedin_tw.loggedOn">
 				<span class="fa fa-twitter"></span> Sign in with Twitter
 			</a>
 			
-			<a class="btn btn-block btn-social btn-twitter" style="margin-left:10%;width:80%;" ng-click="fb_login()">
+			<a class="btn btn-block btn-social btn-twitter" style="margin-left:10%;width:80%; margin-top:5%;" ng-click="tw_login()" ng-show="loggedin_tw.loggedOn">
+				<span class="fa fa-twitter"></span> Sign out {{loggedin_tw.screen_name}}
+			</a>
+			
+			<a class="btn btn-block btn-social btn-twitter" style="margin-left:10%;width:80%;" ng-click="fb_login()" ng-hide="loggedin_fb.loggedOn">
 				<span class="fa fa-facebook"></span> Sign in with Facebook
 			</a>
+			
+			<a class="btn btn-block btn-social btn-twitter" style="margin-left:10%;width:80%;" ng-click="fb_login()" ng-show="loggedin_fb.loggedOn">
+				<span class="fa fa-facebook"></span> Sign out {{loggedin_fb.name }}
+			</a>
+			
 			
 			<a class="btn btn-block btn-social btn-twitter" style="margin-left:10%;width:80%;">
 				<span class="fa fa-google-plus"></span> Sign in with Google
@@ -41,7 +50,7 @@
 			
   <md-toolbar class="md-theme-light">
     <h2 class="md-toolbar-tools">
-				<md-button ng-click="openLeftMenu()" style="float:left !important">
+				<md-button ng-click="openLeftMenu()" style="float:left !important" data-tap-disabled="true">
 			  <i class="fa fa-align-justify x2"></i>
 			</md-button>
 

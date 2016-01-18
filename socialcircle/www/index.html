@@ -3,7 +3,7 @@
 <html ng-app="socialcircle">
     <head>
 	 <meta http-equiv="Content-Security-Policy" 
-	  content="default-src 'self' data: gap: http://localhost https://graph.facebook.com https://www.facebook.com https://ssl.gstatic.com https://fbcdn-profile-a.akamaihd.net 'unsafe-eval'; 
+	  content="default-src 'self' data: gap: http://localhost https://graph.facebook.com https://cdnjs.cloudflare.com/ajax/libs/jsSHA/1.6.0/sha256.js https://api.twitter.com/oauth/ https://cdnjs.cloudflare.com/ajax/libs/jsSHA/1.6.0/sha.js https://www.facebook.com https://ssl.gstatic.com https://fbcdn-profile-a.akamaihd.net 'unsafe-eval'; 
 			   style-src 'self'  'unsafe-inline';  
 			   font-src  'self'  'unsafe-inline';  
 			   media-src *;
@@ -14,6 +14,13 @@
 					  http://localhost
 					  https://graph.facebook.com
 					  https://fbcdn-profile-a.akamaihd.net
+					  http://crypto-js.googlecode.com
+					  https://cdnjs.cloudflare.com/ajax/libs/jsSHA/1.6.0/sha.js
+					  https://cdnjs.cloudflare.com/ajax/libs/jsSHA/1.6.0/sha1.js
+					  https://cdnjs.cloudflare.com/ajax/libs/jsSHA/1.6.0/sha256.js
+					  https://cdnjs.cloudflare.com/ajax/libs/jsSHA/1.6.0/sha512.js
+					  https://cdnjs.cloudflare.com/ajax/libs/jsSHA/1.6.0/sha_dev.js
+					  https://api.twitter.com/oauth/
 					  https://www.facebook.com; ">		
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
@@ -27,7 +34,12 @@
 		<link rel="stylesheet" href="js/bower_components/bootstrap/dist/css/bootstrap.css"/>
 		<link rel="stylesheet" href="js/bower_components/font-awesome/css/font-awesome.css"/>
 		
-		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/1.6.0/sha.js"></script>  
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/1.6.0/sha1.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/1.6.0/sha256.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/1.6.0/sha512.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/1.6.0/sha_dev.js"></script>
+
         <title>SocialCircle</title>
     </head>
     <body>
@@ -46,6 +58,7 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
 		
+		<script  type='application/javascript' src="js/fastclick.js"></script>
 		
 		<!-- Dependent  -->
 		<script type="text/javascript" src="js/bower_components/angular/angular.js"></script>

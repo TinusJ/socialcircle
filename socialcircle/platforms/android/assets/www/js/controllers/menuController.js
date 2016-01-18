@@ -3,10 +3,6 @@ socialcircle.controller('menuController', function($scope,$location,$rootScope,$
 			
 			$scope.openLeftMenu = function(){$mdSidenav('left').toggle();};
 	
-
-	
-					
-				
 					$scope.fb_login = function () {
 						$cordovaOauth.facebook('1636454786575094', [
 						'email',
@@ -14,14 +10,37 @@ socialcircle.controller('menuController', function($scope,$location,$rootScope,$
 						], {
 						redirect_uri: 'http://localhost:8000/callback'
 						}).then(function (result) {
-						displayData($http, result.access_token);
+						displayData_FB($http, result.access_token);
 						}, function (error) {
 						alert(error);
 						});
 					};
+					
+					$scope.tw_login = function(){
+						var api_key = "raicqH0dmpIs3YLfsjQwgMYVm"; 
+						var api_secret = "xAocKfg4qwfxzL0xTXUJGFmmxn9Cn2LrNTQcPOyv8L8GeDmrNF";
+						var myToken ='';
+						//var twitterKey ="twitterKey";
+						var twitterKey = 'STORAGE.TWITTER.KEY';
+						    $cordovaOauth.twitter(api_key, api_secret).then(function (succ) {
+								myToken = succ;
+								window.localStorage.setItem(twitterKey, JSON.stringify(succ));
+								//$twitterApi.configure(api_key, api_secret, succ);
+								//$scope.showHomeTimeline();
+								console.log('Success');
+								
+								$rootScope.loggedin_tw= succ;
+								$rootScope.loggedin_tw.loggedOn = true;
+							  }, function(error) {
+								console.log(error);
+							  });
+						
+																			
+					}
+					
+					
 
-
-					function displayData($http, access_token)
+					function displayData_FB($http, access_token)
 					{
 							$http.get('https://graph.facebook.com/v2.2/me', {
 							params: {
