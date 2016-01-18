@@ -15,8 +15,9 @@ Need fixes 0.0.02<br />
 - Side nave scrolls down with feed<br />
 - Lag / delay on clicks<br />
 - Lag / Delaay on startup (use deviceready)<br />
--colour schemes
+- Colour schemes<br />
 <br />
-Added change when login for twitter and facebook
+Changes
+-Added change when login for twitter and facebook
 
 
