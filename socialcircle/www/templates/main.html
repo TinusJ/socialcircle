@@ -5,8 +5,8 @@
 
   <md-content>
     <md-list>
-      <md-list-item class="md-3-line" ng-repeat="item in messages" ng-click="showConfirm($event,item)" flex="100"  flex-gt-md="auto" data-tap-disabled="true">
-	  
+      <md-list-item class="md-3-line" ng-repeat="item in feeds" ng-click="showConfirm($event,item)" flex="100"  flex-gt-md="auto" data-tap-disabled="true">
+	 <span class={{item.icon}} style={{item.iconstyle}}></span> 
         <div class="md-list-item-text">
           <h3>{{item.what}}</h3>
           <h4>{{item.who}}</h4>

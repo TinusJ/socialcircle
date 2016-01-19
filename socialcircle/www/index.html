@@ -3,7 +3,7 @@
 <html ng-app="socialcircle">
     <head>
 	 <meta http-equiv="Content-Security-Policy" 
-	  content="default-src 'self' data: gap: http://localhost https://graph.facebook.com https://cdnjs.cloudflare.com/ajax/libs/jsSHA/1.6.0/sha256.js https://api.twitter.com/oauth/ https://cdnjs.cloudflare.com/ajax/libs/jsSHA/1.6.0/sha.js https://www.facebook.com https://ssl.gstatic.com https://fbcdn-profile-a.akamaihd.net 'unsafe-eval'; 
+	  content="default-src 'self' data: gap: http://localhost https://graph.facebook.com https://api.twitter.com/1.1/  http://localhost:8000/callback https://api.twitter.com/oauth/ https://www.facebook.com https://ssl.gstatic.com https://fbcdn-profile-a.akamaihd.net 'unsafe-eval'; 
 			   style-src 'self'  'unsafe-inline';  
 			   font-src  'self'  'unsafe-inline';  
 			   media-src *;
@@ -12,15 +12,12 @@
 					  https://www.google-analytics.com
 					  http://maps.googleapis.com
 					  http://localhost
+					  http://localhost:8000/callback
 					  https://graph.facebook.com
 					  https://fbcdn-profile-a.akamaihd.net
-					  http://crypto-js.googlecode.com
-					  https://cdnjs.cloudflare.com/ajax/libs/jsSHA/1.6.0/sha.js
 					  https://cdnjs.cloudflare.com/ajax/libs/jsSHA/1.6.0/sha1.js
-					  https://cdnjs.cloudflare.com/ajax/libs/jsSHA/1.6.0/sha256.js
-					  https://cdnjs.cloudflare.com/ajax/libs/jsSHA/1.6.0/sha512.js
-					  https://cdnjs.cloudflare.com/ajax/libs/jsSHA/1.6.0/sha_dev.js
 					  https://api.twitter.com/oauth/
+					  https://api.twitter.com/1.1/
 					  https://www.facebook.com; ">		
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
@@ -33,12 +30,9 @@
 		<link rel="stylesheet" href="js/bower_components/bootstrap-social/bootstrap-social.css"/>
 		<link rel="stylesheet" href="js/bower_components/bootstrap/dist/css/bootstrap.css"/>
 		<link rel="stylesheet" href="js/bower_components/font-awesome/css/font-awesome.css"/>
-		
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/1.6.0/sha.js"></script>  
+ 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/1.6.0/sha1.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/1.6.0/sha256.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/1.6.0/sha512.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/1.6.0/sha_dev.js"></script>
+
 
         <title>SocialCircle</title>
     </head>
@@ -69,6 +63,8 @@
 		<script type="text/javascript" src="js/bower_components/angular-aria/angular-aria.js"></script>
 		<script type="text/javascript" src="js/bower_components/angular-animate/angular-animate.js"></script>
 		<script type="text/javascript" src="js/bower_components/angular-material/angular-material.js"></script>
+			<script type="text/javascript" src="js/bower_components/ng-twitter-api/dist/ng-twitter-api.js"></script>
+
 
 		<!-- Main JS & Route JS-->
 		<script type="text/javascript" src="js/socialcircle.js"></script>

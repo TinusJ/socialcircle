@@ -5,7 +5,7 @@ socialcircle.controller('mainController', function($scope,$location,$rootScope, 
 				  $scope.showConfirm = function(ev,item) {
 						// Appending dialog to document.body to cover sidenav in docs app
 						var confirm = $mdDialog.confirm()
-							  .title(item.what)
+							  .title(item.who)
 							  .clickOutsideToClose(true)
 							  .textContent(item.notes)
 							  .ariaLabel('Lucky day')
@@ -13,9 +13,9 @@ socialcircle.controller('mainController', function($scope,$location,$rootScope, 
 							  .ok('Share')
 							  .cancel('Cancel');
 						$mdDialog.show(confirm).then(function() {
-						  $scope.status = 'You decided to get rid of your debt.';
+						  $scope.feedbutton = '_SHARE';
 						}, function() {
-						  $scope.status = 'You decided to keep your debt.';
+						   $scope.feedbutton = '_CANCEL';
 						});
 					  };
 				
@@ -28,57 +28,26 @@ socialcircle.controller('mainController', function($scope,$location,$rootScope, 
 				
 				
 				
-// HARD CODED FEEDS . CHANGE!!!!				
+// HARD CODED FEEDS . CHANGE!!!!		
+		$scope.refreshFeeds = function(){
+			if($rootScope.loggedin_tw.loggedOn){
+				
+			}
+		}
+			
+				$rootScope.feeds = $rootScope.twitter_feeds != null ? $rootScope.twitter_feeds : $rootScope.feeds ;
+				//$rootScope.feeds = $rootScope.facebook_feeds  != null ? $rootScope.facebook_feeds : $rootScope.feeds ;
 				
 			var imagePath = 'img/list/60.jpeg';
-$scope.messages = [{
+$rootScope.feeds = [{
       face : imagePath,
       what: 'Brunch this weekend?',
       who: 'Min Li Chan',
       when: '3:08PM',
-      notes: " I'll be in your neighborhood doing errands"
-    }, {
-      face : imagePath,
-      what: 'Brunch this weekend?',
-      who: 'Min Li Chan',
-      when: '3:08PM',
-      notes: " I'll be in your neighborhood doing errands"
-    }, {
-      face : imagePath,
-      what: 'Brunch this weekend?',
-      who: 'Min Li Chan',
-      when: '3:08PM',
-      notes: " I'll be in your neighborhood doing errands"
-    }, {
-      face : imagePath,
-      what: 'Brunch this weekend?',
-      who: 'Min Li Chan',
-      when: '3:08PM',
-      notes: " I'll be in your neighborhood doing errands"
-    }, {
-		 face : imagePath,
-      what: 'Brunch this weekend?',
-      who: 'Min Li Chan',
-      when: '3:08PM',
-      notes: " I'll be in your neighborhood doing errands"
-    }, {
-		 face : imagePath,
-      what: 'Brunch this weekend?',
-      who: 'Min Li Chan',
-      when: '3:08PM',
-      notes: " I'll be in your neighborhood doing errands"
-    }, {
-		 face : imagePath,
-      what: 'Brunch this weekend?',
-      who: 'Min Li Chan',
-      when: '3:08PM',
-      notes: " I'll be in your neighborhood doing errands"
-    }, {
-      face : imagePath,
-      what: 'Brunch this weekend?',
-      who: 'Min Li Chan',
-      when: '3:08PM',
-      notes: " I'll be in your neighborhood doing errands"
+      notes: " I'll be in your neighborhood doing errands",
+	  icon: "fa fa-university ",
+	  iconstyle:"width:10%; color:ligthyellow;font-size:24px;",
+	  fullfeed : null
     }];
 
 });

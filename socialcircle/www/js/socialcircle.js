@@ -1,4 +1,4 @@
- var socialcircle = angular.module("socialcircle", ['ngRoute','ngCordova','ngMaterial']);
+ var socialcircle = angular.module("socialcircle", ['ngRoute','ngCordova','ngMaterial','ngTwitter']);
  
 if ('addEventListener' in document) {
     document.addEventListener('DOMContentLoaded', function() {
